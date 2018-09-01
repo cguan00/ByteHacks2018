@@ -3,8 +3,11 @@
  <head>
    <title>ProjectName</title>
    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+   <script src="data.js"></script>
    <style>
-    body {font-family: 'Raleway', sans-serif;}
+    body {
+      font-family: 'Raleway', sans-serif;
+        }
    </style>
 
      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
@@ -14,9 +17,10 @@
      integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
    crossorigin=""></script>
  </head>
- <body>
-   <h1>ProjectName</h1>
 
+ <body>
+   <center>
+   <h1>ProjectName</h1>
    <div id="map" style="width: 500px; height: 350px"></div>
 
 
@@ -38,7 +42,15 @@
        .addTo(map);
    }
    </script>
-
+   <br>
+  <form method="POST" action="data.js">
+  First name:<br>
+  <input type="text" id="firstname" name="firstname"><br>
+  Last name:<br>
+  <input type="text" id="lastname" name="lastname"> <br>
+  <input type="submit" name="submit" type="submit" onclick="userinput();">
+</form>
+ </center>
  </body>
 
 </html>
